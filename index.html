@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Tecnologías Transformadoras + Seguridad</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #050505;
+            --card-bg: #121212;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-blue: #00F0FF;
+            --accent-purple: #7B2CBF;
+            --accent-green: #00FF94;
+            --accent-orange: #FF9F1C;
+            --accent-pink: #FF007F;
+            --accent-yellow: #FFD700;
+            --accent-teal: #20B2AA;
+            --accent-red: #FF4757; /* Nuevo color para Seguridad */
+            --border-color: #333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            background: linear-gradient(180deg, #0a0a0a 0%, #161616 100%);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+            font-weight: 300;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 6px solid;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .card li {
+            margin-bottom: 6px;
+            color: #ccc;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--text-muted);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        /* Colores específicos para cada tarjeta */
+        .bigdata { border-color: var(--accent-blue); }
+        .bigdata h3 { color: var(--accent-blue); }
+        
+        .ia { border-color: var(--accent-purple); }
+        .ia h3 { color: var(--accent-purple); }
+        
+        .vr { border-color: var(--accent-pink); }
+        .vr h3 { color: var(--accent-pink); }
+        
+        .robot { border-color: var(--accent-orange); }
+        .robot h3 { color: var(--accent-orange); }
+        
+        .cloud { border-color: var(--accent-green); }
+        .cloud h3 { color: var(--accent-green); }
+        
+        .ar { border-color: var(--accent-yellow); }
+        .ar h3 { color: var(--accent-yellow); }
+        
+        .iot { border-color: var(--accent-teal); }
+        .iot h3 { color: var(--accent-teal); }
+
+        .security { border-color: var(--accent-red); }
+        .security h3 { color: var(--accent-red); }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2rem; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>8 Pilares Tecnológicos</h1>
+            <h2>Transformación Digital, Ingeniería y Economía</h2>
+        </header>
+
+        <div class="grid">
+            <!-- Big Data -->
+            <div class="card bigdata">
+                <h3>📊 Big Data</h3>
+                <p>Conjunto de datos masivos (volumen, velocidad, variedad) que requieren herramientas avanzadas para su procesamiento y análisis.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Pipelines de datos, Hadoop, Spark.</li>
+                    <li><strong>Electrónica:</strong> Sensores de alta frecuencia, almacenamiento SSD/NVMe.</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Decisiones basadas en evidencia, no en intuición.</li>
+                    <li>Personalización masiva de productos.</li>
+                </ul>
+            </div>
+
+            <!-- IA -->
+            <div class="card ia">
+                <h3>🤖 Inteligencia Artificial</h3>
+                <p>Sistemas capaces de realizar tareas que requieren inteligencia humana: aprendizaje, razonamiento y percepción.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Algoritmos de ML, Redes Neuronales.</li>
+                    <li><strong>Electrónica:</strong> Chips especializados (TPU, NPU) para inferencia.</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Automatización de procesos cognitivos.</li>
+                    <li>Creación de nuevos mercados (ej. vehículos autónomos).</li>
+                </ul>
+            </div>
+
+            <!-- VR -->
+            <div class="card vr">
+                <h3>🥽 Realidad Virtual (VR)</h3>
+                <p>Entorno simulado inmersivo generado por computadora que aísla al usuario del mundo físico.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Motores gráficos (Unity, Unreal), optimización de renderizado.</li>
+                    <li><strong>Electrónica:</strong> Pantallas de alta resolución, giroscopios, controladores hápticos.</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Entrenamiento industrial sin riesgos.</li>
+                    <li>Entretenimiento y turismo digital.</li>
+                </ul>
+            </div>
+
+            <!-- Robótica -->
+            <div class="card robot">
+                <h3>🦾 Robótica</h3>
+                <p>Diseño y construcción de robots para automatizar tareas físicas, peligrosas o de precisión.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Control de movimiento, visión por computadora.</li>
+                    <li><strong>Electrónica:</strong> Actuadores, microcontroladores, sensores LiDAR.</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Aumento de productividad en manufactura.</li>
+                    <li>Reducción de costos laborales en tareas repetitivas.</li>
+                </ul>
+            </div>
+
+            <!-- Nube -->
+            <div class="card cloud">
+                <h3>☁️ Computación en la Nube</h3>
+                <p>Entrega de servicios informáticos (servidores, almacenamiento) a través de internet bajo demanda.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Microservicios, Contenedores (Docker/K8s).</li>
+                    <li><strong>Electrónica:</strong> Infraestructura de centros de datos (refrigeración, energía).</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Cambio de CapEx a OpEx (gasto operativo).</li>
+                    <li>Escalabilidad global instantánea.</li>
+                </ul>
+            </div>
+
+            <!-- AR -->
+            <div class="card ar">
+                <h3>👓 Realidad Aumentada (AR)</h3>
+                <p>Superposición de información digital sobre el mundo real en tiempo real.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Tracking de marcadores, fusión sensorial.</li>
+                    <li><strong>Electrónica:</strong> Cámaras, proyectores, gafas inteligentes.</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Mantenimiento remoto asistido.</li>
+                    <li>Marketing interactivo y retail.</li>
+                </ul>
+            </div>
+
+            <!-- IoT -->
+            <div class="card iot">
+                <h3>📡 Internet de las Cosas (IoT)</h3>
+                <p>Red de objetos físicos conectados a internet que recopilan y comparten datos.</p>
+                <div class="section-title">Impacto Técnico</div>
+                <ul>
+                    <li><strong>Sistemas:</strong> Protocolos de comunicación (MQTT, Zigbee).</li>
+                    <li><strong>Electrónica:</strong> Microcontroladores (ESP32, Arduino), sensores de bajo consumo.</li>
+                </ul>
+                <div class="section-title">Impacto Económico</div>
+                <ul>
+                    <li>Cadenas de suministro inteligentes.</li>
+                    <li>Monetización de datos de uso de productos.</li>
+                </ul>
+            </div>
+
+            <!-- Ciberseguridad -->
+            <div class="
