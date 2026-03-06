@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía Tecnológica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+        :root {
+            --bg-color: #0b0c15;
+            --card-bg: #151621;
+            --text-color: #ffffff;
+            --accent-cyan: #00F0FF;
+            --accent-purple: #7B2CBF;
+            --accent-green: #00FF94;
+            --accent-orange: #FF9F1C;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: linear-gradient(145deg, #0b0c15, #1a1c29);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+            border: 1px solid #2a2d3e;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent-cyan);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #888;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .card li {
+            margin-bottom: 5px;
+            color: #ddd;
+        }
+
+        /* Colores específicos para cada tarjeta */
+        .hyper { border-color: var(--accent-cyan); }
+        .hyper h3 { color: var(--accent-cyan); }
+        
+        .super { border-color: var(--accent-purple); }
+        .super h3 { color: var(--accent-purple); }
+        
+        .cloud { border-color: var(--accent-green); }
+        .cloud h3 { color: var(--accent-green); }
+        
+        .security { border-color: var(--accent-orange); }
+        .security h3 { color: var(--accent-orange); }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Los 4 Pilares Digitales</h1>
+            <h2>Hiperconectividad • Supercomputación • Nube • Ciberseguridad</h2>
+        </header>
+
+        <div class="grid">
+            <!-- Tarjeta 1: Hiperconectividad -->
+            <div class="card hyper">
+                <h3>🌐 Hiperconectividad</h3>
+                <p>Conexión constante entre dispositivos y personas en tiempo real.</p>
+                <ul>
+                    <li>Redes 5G y 6G de ultra baja latencia.</li>
+                    <li>Internet de las Cosas (IoT).</li>
+                    <li>Generación masiva de datos.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2: Supercomputación -->
+            <div class="card super">
+                <h3>🚀 Supercomputación</h3>
+                <p>Potencia de cálculo masiva para resolver problemas complejos.</p>
+                <ul>
+                    <li>Procesamiento en ExaFlops.</li>
+                    <li>Simulaciones climáticas y médicas.</li>
+                    <li>Aceleración de la IA.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 3: Nube -->
+            <div class="card cloud">
+                <h3>☁️ Computación en la Nube</h3>
+                <p>Acceso remoto a recursos informáticos sin hardware local.</p>
+                <ul>
+                    <li>Escalabilidad bajo demanda.</li>
+                    <li>Trabajo híbrido y colaboración.</li>
+                    <li>Almacenamiento seguro y flexible.</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 4: Ciberseguridad -->
+            <div class="card security">
+                <h3>🛡️ Ciberseguridad</h3>
+                <p>Protección de sistemas, redes y datos contra ataques digitales.</p>
+                <ul>
+                    <li>Defensa contra Ransomware.</li>
+                    <li>Encriptación de datos.</li>
+                    <li>Privacidad y cumplimiento legal.</li>
+                </ul>
